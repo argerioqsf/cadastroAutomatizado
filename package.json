@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/argerioqsf/cadastroAutomatizado/issues"
   },
-  "homepage": "https://github.com/argerioqsf/cadastroAutomatizado#readme"
+  "homepage": "https://github.com/argerioqsf/cadastroAutomatizado#readme",
+  "dependencies": {
+    "firebase-admin": "^6.0.0"
+  }
 }
