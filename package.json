@@ -1,0 +1,19 @@
+{
+  "name": "cadastroalunos",
+  "version": "1.0.0",
+  "description": "cadastro de alunos do phidelis no firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/argerioqsf/cadastroAutomatizado.git"
+  },
+  "author": "Argério Queiroz da Silva Filho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/argerioqsf/cadastroAutomatizado/issues"
+  },
+  "homepage": "https://github.com/argerioqsf/cadastroAutomatizado#readme"
+}
