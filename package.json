@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/argerioqsf/cadastroAutomatizado#readme",
   "dependencies": {
+    "file-system": "^2.2.2",
     "firebase-admin": "^6.0.0"
   }
 }
