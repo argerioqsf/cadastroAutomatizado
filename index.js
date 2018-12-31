@@ -11,7 +11,14 @@ admin.initializeApp({
 var db = admin.database();
 var ref = db.ref("config/modulos_user").once("value",modulos=>{
     ReadCsv(modulos.val());
+    //verificarUsuario();
 });
+
+function verificarUsuario(){
+    db.ref("user_perfil/").orderByChild("id").equalTo("RRLSWWqxxmc5mpuA59NSPfPKVs82").once("value",info=>{ 
+        console.log("informações: ",info.val());
+    });
+}
 
 /*ref.once("value", snapshot=>{
   console.log("func_perfil: ",snapshot.val());
@@ -76,7 +83,7 @@ function csvJSON(csv,modulos){
             return h.trim();
         });
         for(var j=0;j<headers.length;j++){
-            if(currentline[j] != undefined && currentline[j] != "-"){
+            if(currentline[j] != undefined && currentline[j] != "-"){ 
                 obj[headers[j]] = currentline[j];
             }else{
                 obj[headers[j]] = "";
@@ -86,6 +93,9 @@ function csvJSON(csv,modulos){
         obj.imagem = "assets/images/newUser-b.png";
         obj.imagemuid = generateUUID();
         obj.perfil = "user";
+        obj.confirmado = false;
+        obj.ano = null;
+        obj.email = "";
         obj.modulos = modulos;
         result.push(obj);
         let temp = result;
